@@ -928,5 +928,19 @@
   "Retry": "重试",
   "Your pick": "你的选择",
   "No categories yet.": "暂无分类。",
-  "Original Session": "原始会话"
+  "Original Session": "原始会话",
+  "Visualize": "可视化",
+  "Generate SVG, Chart.js, or Mermaid visualizations": "生成 SVG、Chart.js 或 Mermaid 可视化",
+  "Summary": "摘要",
+  "Running summary of the learning journey. Auto-updated after conversations.": "学习旅程摘要，对话后自动更新。",
+  "User identity, preferences, and knowledge levels. Auto-updated after conversations.": "用户身份、偏好和知识水平，对话后自动更新。",
+  "Not updated yet": "尚未更新",
+  "Memory refreshed from session": "记忆已从会话刷新",
+  "{{label}} saved": "{{label}}已保存",
+  "Clear {{label}}?": "清除{{label}}？",
+  "{{label}} cleared": "{{label}}已清除",
+  "No {{label}} yet": "暂无{{label}}",
+  "Updated:": "更新时间：",
+  "Hide secret": "隐藏密钥",
+  "Show secret": "显示密钥"
 }

@@ -917,5 +917,19 @@
   "Failed to load entries": "Не удалось загрузить записи",
   "Your pick": "Твой выбор",
   "No categories yet.": "Категорий пока нет.",
-  "Original Session": "Исходная сессия"
+  "Original Session": "Исходная сессия",
+  "Visualize": "Визуализация",
+  "Generate SVG, Chart.js, or Mermaid visualizations": "Создание визуализаций: SVG, Chart.js или Mermaid",
+  "Summary": "Обзор",
+  "Running summary of the learning journey. Auto-updated after conversations.": "Краткий обзор твоего обучения. Обновляется автоматически после разговоров.",
+  "User identity, preferences, and knowledge levels. Auto-updated after conversations.": "Твои данные, предпочтения и уровень знаний. Обновляется автоматически после разговоров.",
+  "Not updated yet": "Пока не обновлялось",
+  "Memory refreshed from session": "Память обновлена из сессии",
+  "{{label}} saved": "{{label}} сохранено",
+  "Clear {{label}}?": "Очистить {{label}}?",
+  "{{label}} cleared": "{{label}} очищено",
+  "No {{label}} yet": "{{label}} пока нет",
+  "Updated:": "Обновлено:",
+  "Hide secret": "Скрыть секрет",
+  "Show secret": "Показать секрет"
 }

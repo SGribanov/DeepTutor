@@ -928,5 +928,19 @@
   "Retry": "Retry",
   "Your pick": "Your pick",
   "No categories yet.": "No categories yet.",
-  "Original Session": "Original Session"
+  "Original Session": "Original Session",
+  "Visualize": "Visualize",
+  "Generate SVG, Chart.js, or Mermaid visualizations": "Generate SVG, Chart.js, or Mermaid visualizations",
+  "Summary": "Summary",
+  "Running summary of the learning journey. Auto-updated after conversations.": "Running summary of the learning journey. Auto-updated after conversations.",
+  "User identity, preferences, and knowledge levels. Auto-updated after conversations.": "User identity, preferences, and knowledge levels. Auto-updated after conversations.",
+  "Not updated yet": "Not updated yet",
+  "Memory refreshed from session": "Memory refreshed from session",
+  "{{label}} saved": "{{label}} saved",
+  "Clear {{label}}?": "Clear {{label}}?",
+  "{{label}} cleared": "{{label}} cleared",
+  "No {{label}} yet": "No {{label}} yet",
+  "Updated:": "Updated:",
+  "Hide secret": "Hide secret",
+  "Show secret": "Show secret"
 }
