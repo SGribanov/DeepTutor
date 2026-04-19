@@ -942,5 +942,16 @@
   "No {{label}} yet": "No {{label}} yet",
   "Updated:": "Updated:",
   "Hide secret": "Hide secret",
-  "Show secret": "Show secret"
+  "Show secret": "Show secret",
+  "Channels": "Channels",
+  "Channels saved": "Channels saved",
+  "Channel listeners failed to restart:": "Channel listeners failed to restart:",
+  "Config is saved on disk; stop and start the bot to apply.": "Config is saved on disk; stop and start the bot to apply.",
+  "Delivery": "Delivery",
+  "Enabled": "Enabled",
+  "Invalid channel configuration": "Invalid channel configuration",
+  "Save failed": "Save failed",
+  "Select a channel.": "Select a channel.",
+  "Stream progress text to channels": "Stream progress text to channels",
+  "Stream tool hints to channels": "Stream tool hints to channels"
 }

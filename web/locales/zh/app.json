@@ -942,5 +942,16 @@
   "No {{label}} yet": "暂无{{label}}",
   "Updated:": "更新时间：",
   "Hide secret": "隐藏密钥",
-  "Show secret": "显示密钥"
+  "Show secret": "显示密钥",
+  "Channels": "频道",
+  "Channels saved": "频道已保存",
+  "Channel listeners failed to restart:": "频道监听器重启失败：",
+  "Config is saved on disk; stop and start the bot to apply.": "配置已保存到磁盘；停止并重启机器人以应用。",
+  "Delivery": "消息推送",
+  "Enabled": "已启用",
+  "Invalid channel configuration": "无效的频道配置",
+  "Save failed": "保存失败",
+  "Select a channel.": "请选择一个频道。",
+  "Stream progress text to channels": "向频道推送进度文本",
+  "Stream tool hints to channels": "向频道推送工具提示"
 }

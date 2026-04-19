@@ -931,5 +931,16 @@
   "No {{label}} yet": "{{label}} пока нет",
   "Updated:": "Обновлено:",
   "Hide secret": "Скрыть секрет",
-  "Show secret": "Показать секрет"
+  "Show secret": "Показать секрет",
+  "Channels": "Каналы",
+  "Channels saved": "Каналы сохранены",
+  "Channel listeners failed to restart:": "Не удалось перезапустить слушатели каналов:",
+  "Config is saved on disk; stop and start the bot to apply.": "Настройки сохранены на диск. Останови и запусти бота, чтобы применить.",
+  "Delivery": "Доставка",
+  "Enabled": "Включено",
+  "Invalid channel configuration": "Неверная настройка канала",
+  "Save failed": "Сохранение не удалось",
+  "Select a channel.": "Выбери канал.",
+  "Stream progress text to channels": "Отправлять прогресс в каналы",
+  "Stream tool hints to channels": "Отправлять подсказки инструментов в каналы"
 }
