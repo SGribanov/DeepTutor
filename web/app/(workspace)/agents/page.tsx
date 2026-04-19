@@ -245,6 +245,7 @@ function SchemaField({
   showSecretFor: Set<string>;
   toggleSecret: (path: string) => void;
 }) {
+  const { t } = useTranslation();
   const v = resolveSchemaVariant(schema);
   const label = schema.title || v.title || humaniseKey(fieldKey);
   const description = schema.description || v.description;
@@ -376,8 +377,8 @@ function SchemaField({
             type="button"
             onClick={() => toggleSecret(path)}
             className="absolute right-1 top-1/2 -translate-y-1/2 rounded-md p-1.5 text-[var(--muted-foreground)] hover:bg-[var(--muted)] hover:text-[var(--foreground)]"
-            aria-label={reveal ? "Hide secret" : "Show secret"}
-            title={reveal ? "Hide secret" : "Show secret"}
+            aria-label={reveal ? t("Hide secret") : t("Show secret")}
+            title={reveal ? t("Hide secret") : t("Show secret")}
           >
             {reveal ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
           </button>
