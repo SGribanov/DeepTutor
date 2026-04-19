@@ -1,6 +1,7 @@
 {
   "language.english": "English",
   "language.chinese": "中文",
+  "language.russian": "Русский",
   "Start": "Начать",
   "Learn": "Учиться",
   "Research": "Исследование",
@@ -321,6 +322,8 @@
   "Filter by type": "Фильтр по типу",
   "Today": "Сегодня",
   "Yesterday": "Вчера",
+  "Last 7 days": "Последние 7 дней",
+  "Earlier": "Ранее",
   "session": "сессия",
   "sessions": "сессий",
   "All": "Все",

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Bot } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 
@@ -13,18 +14,21 @@ interface RecentBot {
   updated_at: string;
 }
 
-function relativeTime(iso: string): string {
+function relativeTime(iso: string, locale: string): string {
   const diff = Date.now() - new Date(iso).getTime();
-  const mins = Math.floor(diff / 60000);
-  if (mins < 1) return "just now";
-  if (mins < 60) return `${mins}m`;
+  const secs = Math.floor(diff / 1000);
+  const formatter = new Intl.RelativeTimeFormat(locale, { numeric: "auto", style: "narrow" });
+  if (secs < 60) return formatter.format(-secs, "second");
+  const mins = Math.floor(secs / 60);
+  if (mins < 60) return formatter.format(-mins, "minute");
   const hrs = Math.floor(mins / 60);
-  if (hrs < 24) return `${hrs}h`;
+  if (hrs < 24) return formatter.format(-hrs, "hour");
   const days = Math.floor(hrs / 24);
-  return `${days}d`;
+  return formatter.format(-days, "day");
 }
 
 export function TutorBotRecent({ collapsed = false }: { collapsed?: boolean }) {
+  const { i18n } = useTranslation();
   const [bots, setBots] = useState<RecentBot[]>([]);
 
   useEffect(() => {
@@ -83,7 +87,7 @@ export function TutorBotRecent({ collapsed = false }: { collapsed?: boolean }) {
             {bot.name}
           </span>
           <span className="shrink-0 text-[10px] tabular-nums text-[var(--muted-foreground)]/40">
-            {relativeTime(bot.updated_at)}
+            {relativeTime(bot.updated_at, i18n.language)}
           </span>
         </Link>
       ))}
