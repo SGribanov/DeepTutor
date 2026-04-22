@@ -15,8 +15,21 @@ start "" cmd /c "timeout /t 5 /nobreak >nul & start http://localhost:3782"
 :: Ensure all backend deps are installed (server extras + CLI requirements)
 :: server extras = fastapi/uvicorn (in pyproject optional-deps)
 :: cli.txt = llama_index and other runtime libs (not in pyproject)
-uv sync --extra server >nul 2>&1
-uv pip install -r requirements/cli.txt >nul 2>&1
+echo Проверяю зависимости (первый запуск может занять пару минут)...
+call uv sync --extra server
+if errorlevel 1 (
+    echo.
+    echo ОШИБКА: uv sync не удался. Проверь интернет.
+    pause
+    exit /b 1
+)
+call uv pip install -r requirements/cli.txt
+if errorlevel 1 (
+    echo.
+    echo ОШИБКА: установка cli.txt не удалась.
+    pause
+    exit /b 1
+)
 
 :: Launch backend + frontend via the project launcher
 uv run --extra server python scripts/start_web.py
