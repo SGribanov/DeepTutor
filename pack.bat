@@ -20,7 +20,7 @@ echo.
 echo  Copying project to %USB%DeepTutor ...
 echo  (shows each file with percent and ETA; large files may sit on one line)
 echo.
-robocopy "%~dp0." "%USB%DeepTutor" /mir /njh /njs /ndl /eta ^
+robocopy "%~dp0." "%USB%DeepTutor" /mir /njh /njs /ndl /eta /mt:8 ^
     /xd node_modules .venv .next .git __pycache__ .mypy_cache .ruff_cache ^
     /xf *.pyc pack.bat
 set RC=%ERRORLEVEL%
