@@ -82,17 +82,9 @@ where uv >nul 2>&1 && echo        OK || echo        ОШИБКА: uv не най
 :: ── 5. Python dependencies ──────────────────────────────
 echo.
 echo [5/7] Python-зависимости...
-call uv sync --extra server
+call uv sync --extra server --extra cli
 if errorlevel 1 (
     echo        ОШИБКА: uv sync не удался. Проверь интернет и запусти установщик снова.
-    pause
-    exit /b 1
-)
-:: Activate project venv so `uv pip install` targets it (not system Python)
-call .venv\Scripts\activate.bat
-call uv pip install -r requirements/cli.txt
-if errorlevel 1 (
-    echo        ОШИБКА: не удалось установить CLI-зависимости.
     pause
     exit /b 1
 )

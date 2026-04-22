@@ -40,6 +40,18 @@ anthropic = ["anthropic>=0.30.0"]
 dashscope = ["dashscope>=1.14.0"]
 search = ["perplexityai>=0.1.0"]
 oauth = ["oauth-cli-kit>=0.1.1; python_version >= '3.11'"]
+# Full CLI runtime: LLM provider SDKs, RAG (LlamaIndex), PDF/arxiv, numpy.
+# Mirror of requirements/cli.txt for pip-free installs via `uv sync --extra cli`.
+cli = [
+    "anthropic>=0.30.0",
+    "dashscope>=1.14.0",
+    "perplexityai>=0.1.0",
+    "oauth-cli-kit>=0.1.1; python_version >= '3.11'",
+    "llama-index>=0.14.12",
+    "PyMuPDF>=1.26.0",
+    "numpy>=1.24.0,<2.0.0",
+    "arxiv>=2.0.0",
+]
 server = [
     "fastapi>=0.100.0",
     "uvicorn[standard]>=0.24.0",
@@ -52,6 +64,10 @@ all = [
     "dashscope>=1.14.0",
     "perplexityai>=0.1.0",
     "oauth-cli-kit>=0.1.1; python_version >= '3.11'",
+    "llama-index>=0.14.12",
+    "PyMuPDF>=1.26.0",
+    "numpy>=1.24.0,<2.0.0",
+    "arxiv>=2.0.0",
     "fastapi>=0.100.0",
     "uvicorn[standard]>=0.24.0",
     "websockets>=12.0",
