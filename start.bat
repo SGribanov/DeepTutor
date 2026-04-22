@@ -12,5 +12,8 @@ if %errorlevel%==0 (
 :: Open browser after a short delay (frontend needs ~3s to boot)
 start "" cmd /c "timeout /t 5 /nobreak >nul & start http://localhost:3782"
 
+:: Ensure server extras are installed (uvicorn/fastapi live in optional-deps)
+uv sync --extra server >nul 2>&1
+
 :: Launch backend + frontend via the project launcher
-uv run python scripts/start_web.py
+uv run --extra server python scripts/start_web.py
