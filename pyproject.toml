@@ -58,6 +58,8 @@ server = [
     "websockets>=12.0",
     "python-multipart>=0.0.6",
 ]
+# math-animator pulls numpy>=2.1, which conflicts with the numpy<2.0 pin
+# required by the rest of the cli stack — kept as opt-in only (excluded from `all`).
 math-animator = ["manim>=0.19.0"]
 all = [
     "anthropic>=0.30.0",
@@ -72,7 +74,21 @@ all = [
     "uvicorn[standard]>=0.24.0",
     "websockets>=12.0",
     "python-multipart>=0.0.6",
-    "manim>=0.19.0",
+]
+
+# uv resolves a single lock across all extras simultaneously. The cli stack
+# pins numpy<2.0 (PyMuPDF/llama-index compat), but manim requires numpy>=2.1.
+# Declare them mutually exclusive so the resolver can produce a valid lock.
+[tool.uv]
+conflicts = [
+    [
+        { extra = "cli" },
+        { extra = "math-animator" },
+    ],
+    [
+        { extra = "all" },
+        { extra = "math-animator" },
+    ],
 ]
 
 [tool.setuptools]
