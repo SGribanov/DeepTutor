@@ -33,5 +33,7 @@ if errorlevel 1 (
     exit /b 1
 )
 
-:: Launch backend + frontend via the project launcher
-uv run --extra server python scripts/start_web.py
+:: Launch backend + frontend via the project venv directly.
+:: NOTE: do NOT use `uv run` here — it re-syncs the venv against pyproject.toml
+:: and would uninstall packages from requirements/cli.txt (e.g. llama_index).
+.venv\Scripts\python.exe scripts/start_web.py
