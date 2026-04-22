@@ -12,8 +12,11 @@ if %errorlevel%==0 (
 :: Open browser after a short delay (frontend needs ~3s to boot)
 start "" cmd /c "timeout /t 5 /nobreak >nul & start http://localhost:3782"
 
-:: Ensure server extras are installed (uvicorn/fastapi live in optional-deps)
+:: Ensure all backend deps are installed (server extras + CLI requirements)
+:: server extras = fastapi/uvicorn (in pyproject optional-deps)
+:: cli.txt = llama_index and other runtime libs (not in pyproject)
 uv sync --extra server >nul 2>&1
+uv pip install -r requirements/cli.txt >nul 2>&1
 
 :: Launch backend + frontend via the project launcher
 uv run --extra server python scripts/start_web.py
